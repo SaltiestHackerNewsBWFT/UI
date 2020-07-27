@@ -21,8 +21,69 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
 }
 * {
   border-spacing: border-box,
+}
+
+/* Color Guide:
+#f6f6ef --Pale-Yellow
+#ff6600 --Orange
+#828282
+#000
+#222
+#5a5a5a
+#737373
+#888
+#9c9c9c
+#aeaeae
+#bebebe
+#cecece
+#ddd
+#fff
+*/
+body {
+  margin: 0 5%;
+}
+header {
+  padding: 0 0 0 1rem;
+  background-color: #f6f6ef;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px;
+
+}
+
+h1 {
+  font-family: 'Ovo', serif;
+  letter-spacing: -.05em;
+  margin-top: .3rem;
+  font-size: 2.5rem;
+}
+
+header nav {
+  display: flex;
+  margin-top: 3rem;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+
+a {
+  color: #222;
+  background-color: #ff6600;
+  text-decoration: none;
+  transition: color;
+  font-size: 1em;
+  font-weight: 500;
+  padding: .75em 1em;
+  margin: 0;
+  border-radius: 10px;
+}
+
+a:hover {
+  color: #f6f6ef;
+  transition-duration: 500ms;
 }
