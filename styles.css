@@ -50,6 +50,8 @@ body {
   margin: 0 auto;
   max-width: 2000px;
 }
+
+
 .container {
   margin: 0 5% 5% 5%;
 }
@@ -91,6 +93,7 @@ header nav {
   margin-right: 1rem;
   flex-wrap: nowrap;
   min-width: 300px;
+  padding-bottom: 1rem;
 }
 
 
@@ -114,7 +117,7 @@ a:hover {
 .main {
   display:flex;
   flex-flow: row wrap;
-  height: 90vh;
+  min-height: 900px;
   flex: 1 1 500px;
   align-items: stretch;
   border-bottom: #f60 .2rem solid;
@@ -138,16 +141,16 @@ a:hover {
 
 .graphic h2 {
   opacity: 0.6;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .call-to-action {
-  background-color: #f6f6ef;
   width: 50%;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   flex: 1 400px;
+  min-height: 500px;
 }
 
 .main-link {
@@ -170,7 +173,7 @@ h2 {
 }
 ul {
   margin-left: 2em;
-  font-size: 3rem;
+  font-size: 2rem;
   border-radius: 10px;
 }
 
@@ -180,7 +183,7 @@ li {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 500;
   font-variant: small-caps;
   padding: 2rem;
@@ -195,11 +198,25 @@ h3 {
 figure {
   max-width: 20%;
   min-width: 400px;
-  margin: 1em;
+  min-height: 300px;
+  margin: 2em;
+}
+figcaption {
+  font-weight: 600;
+  display: block;
+  padding-top: 1em;
+  border-top: #F60 .1rem solid;
 }
 img {
   width: 100%;
+  height: auto;
+  filter: grayscale(100%);
 }
+
+.album {
+  margin-bottom: 4rem;
+}
+
 
 footer {
   border-top: #f60 .2rem solid; 
@@ -210,13 +227,38 @@ footer {
   .container {
     margin: 0;
   }
-  h2 {
-    font-size: 3rem !important; /*why doenst' this work without this? I will find out later */
-    padding: 1em;
+  nav {
   }
+
+  header { justify-content: center;
+  }
+  header nav {
+    min-width: 0;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: .2em;
+  }
+  h2 {
+    font-size: 1.5rem !important; /*why doenst' this work without this? I will find out later */
+    padding: 1em;
+    margin: 0;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
   .graphic {
     margin: 0
   }
   figure {
     max-width: 100%;
+    min-width: 100%;
+    min-height: 20vh;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
