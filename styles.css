@@ -26,7 +26,7 @@ time, mark, audio, video {
   text-align: center;
 }
 * {
-  border-spacing: border-box,
+  box-sizing: border-box,
 }
 
 /* Color Guide:
@@ -87,7 +87,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-header nav {
+nav {
   display: flex;
   margin-top: 3rem;
   margin-right: 1rem;
@@ -139,7 +139,7 @@ a:hover {
   flex: 1 700px;
 }
 
-.graphic h2 {
+h2 {
   opacity: 0.6;
   font-size: 4rem;
 }
@@ -218,21 +218,74 @@ img {
 }
 
 
+.return-to-top {
+  background-color: transparent;
+}
+
+.social-media {
+  flex: 1 1 200px;
+  text-align: right;
+}
+
+.social-media i, .return-to-top i {
+  font-size: 3rem;
+  color: #F60;
+  transition: color;
+}
+.social-media i:hover, .return-to-top i:hover {
+  color: #333;
+  transition-duration: 500ms;
+}
+
+p a {
+  background-color: transparent;
+  text-align: right;
+}
+
+.social-media a {
+  background-color: transparent;
+}
+
+.social-media a:hover {
+  color: #333;
+  transition-duration: 500ms;
+}
+
+.bottom-row {
+  display: flex;
+  flex-flow: column; 
+  align-items: center;
+}
+
+.bottom-row nav {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
 footer {
-  border-top: #f60 .2rem solid; 
-  padding: 5rem;
+  background-color: #f6f6ef;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: #f60 .2rem solid;
+  padding: 0;
+  align-items: baseline;
+}
+
+.copyright {
+  padding: 0;
 }
 
 @media(max-width: 600px) {
   .container {
     margin: 0;
   }
-  nav {
-  }
 
-  header { justify-content: center;
+  header, footer {
+    justify-content: center;
   }
-  header nav {
+  nav {
     min-width: 0;
     align-content: center;
     flex-wrap: wrap;
@@ -242,15 +295,13 @@ footer {
     margin: .2em;
   }
   h2 {
-    font-size: 1.5rem !important; /*why doenst' this work without this? I will find out later */
+    font-size: 1.5rem; 
     padding: 1em;
     margin: 0;
   }
-
   li {
     font-size: 1rem;
   }
-
   .graphic {
     margin: 0
   }
@@ -260,5 +311,8 @@ footer {
     min-height: 20vh;
     margin-left: 0;
     margin-right: 0;
+  }
+  .social-media {
+    text-align: center;
   }
 }
