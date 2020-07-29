@@ -212,6 +212,19 @@ img {
   height: auto;
   filter: grayscale(100%);
 }
+/* about page alteration */
+.id-card img {
+  filter: none;
+  border: dashed #f60 .1em;
+  border-radius: 5px;
+}
+.id-card {
+  border: solid #f60 .2em;
+  border-radius: 15px;
+  display: flex;
+}
+
+
 
 .album {
   margin-bottom: 4rem;
