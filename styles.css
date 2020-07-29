@@ -1,0 +1,402 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+* {
+  box-sizing: border-box,
+}
+
+/* Color Guide:
+#f6f6ef --Pale-Yellow
+#ff6600 --Orange
+#828282
+#000
+#222
+#5a5a5a
+#737373
+#888
+#9c9c9c
+#aeaeae
+#bebebe
+#cecece
+#ddd
+#fff
+*/
+
+body {
+  margin: 0 auto;
+  max-width: 2000px;
+  padding: 0;
+}
+
+
+.container {
+  margin: 0 5% 0 5%;
+}
+
+header {
+  padding: 0 0 0 1rem;
+  background-color: #f6f6ef;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+/*
+header::after {
+  content: "";
+  background: url('https://images.unsplash.com/photo-1518110925495-5fe2fda0442c');
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  background-size: contain;
+}
+*/
+
+h1 {
+  font-family: 'Ovo', serif;
+  font-variant: small-caps;
+  letter-spacing: -.05em;
+  margin-top: .3rem;
+  font-size: 2.5rem;
+}
+
+nav {
+  display: flex;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  flex-wrap: nowrap;
+  min-width: 300px;
+  padding-bottom: 1rem;
+}
+
+
+a {
+  color: #222;
+  background-color: #ff6600;
+  text-decoration: none;
+  transition: color;
+  font-size: 1em;
+  font-weight: 500;
+  font-variant: small-caps;
+  padding: .75em 1em;
+  margin: 0 1%;
+  border-radius: 10px;
+}
+
+a:hover {
+  color: #f6f6ef;
+  transition-duration: 500ms;
+}
+.main {
+  display:flex;
+  flex-flow: row wrap;
+  min-height: 900px;
+  flex: 1 1 500px;
+  align-items: stretch;
+  border-bottom: #f60 .2rem solid;
+  background-color: #f6f6ef;
+}
+
+.graphic {
+  margin: 0 2em;
+  display: flex;
+  min-width: 40%;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/flagged/photo-1567427015570-335a790e8d76");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(90%) contrast(150%);
+  flex: 1 700px;
+}
+
+h2 {
+  opacity: 0.6;
+  font-size: 4rem;
+}
+.call-to-action {
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  flex: 1 400px;
+  min-height: 500px;
+}
+
+.main-link {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 4rem;
+  background-color: white;
+  margin: 2rem;
+  opacity: .8;
+  border-radius: 10px;
+}
+
+.list-container {
+  background-color: white;
+  margin: 2rem;
+  opacity: .7;
+  border-radius: 10px;
+}
+ul {
+  margin-left: 2em;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+li {
+  text-align: left;
+  padding: 1em .1em;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  font-variant: small-caps;
+  padding: 2rem;
+}
+
+.album {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+figure {
+  max-width: 20%;
+  min-width: 400px;
+  min-height: 300px;
+  margin: 2em;
+}
+figcaption {
+  font-weight: 600;
+  display: block;
+  padding-top: 1em;
+  border-top: #F60 .1rem solid;
+}
+img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+/* about page alteration */
+
+.about-team-header {
+  min-height: 4rem;
+}
+.about-main {
+  min-height: 0;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.id-card img {
+  object-fit: cover;
+  max-width: 20%;
+  min-width: 300px;
+  margin: 4%;
+  filter: none;
+  border: dashed #f60 .1em;
+  border-radius: 5px;
+}
+
+.id-card p {
+  margin: 1% 1%;
+  text-align: left;
+  font-size: 2rem;
+  border-bottom: solid #f60 2px;
+}
+
+.id-card .description, .id-card .title {
+  border: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-right: 1em;
+}
+
+.id-card figure {
+  width: 100%;
+  max-width: 100%;
+  margin: 1%;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.id-card figcaption {
+  flex: 1 1;
+  min-height: 200px;
+  border: none;
+  flex: 1 1 200px;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.id-card {
+  max-width: 30%;
+  min-width: 600px;
+  border: solid #f60 .2em;
+  border-radius: 15px;
+  background-color: #f6f6ef;
+  margin: 2% 1%;
+}
+
+/*end of about page specifics*/
+
+.album {
+  margin-bottom: 4rem;
+}
+
+
+.return-to-top {
+  background-color: transparent;
+}
+
+.social-media {
+  flex: 1 1 200px;
+  text-align: right;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.social-media i, .return-to-top i {
+  font-size: 3rem;
+  color: #F60;
+  transition: color;
+}
+.social-media i:hover, .return-to-top i:hover {
+  color: #333;
+  transition-duration: 500ms;
+}
+
+p a {
+  background-color: transparent;
+  text-align: right;
+}
+
+.social-media a {
+  background-color: transparent;
+}
+
+.social-media a:hover {
+  color: #333;
+  transition-duration: 500ms;
+}
+
+.bottom-row {
+  display: flex;
+  flex-flow: column; 
+  align-items: center;
+}
+
+.bottom-row nav {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+footer {
+  background-color: #f6f6ef;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: #f60 .2rem solid;
+  padding: 0;
+  align-items: baseline;
+}
+
+.copyright {
+  padding: 0;
+}
+
+@media(max-width: 600px) {
+  .container {
+    margin: 0;
+  }
+
+  header, footer {
+    justify-content: center;
+  }
+  nav {
+    min-width: 0;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: .2em;
+  }
+  h2 {
+    font-size: 1.5rem; 
+    padding: 1em;
+    margin: 0;
+  }
+  li {
+    font-size: 1rem;
+  }
+  .graphic {
+    margin: 0
+  }
+  figure {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 20vh;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .social-media {
+    text-align: center;
+  }
+.id-card {
+    width: 100%;
+    min-width: 270px;
+  }
+.id-card figure {
+  flex-flow: column nowrap;
+}
+.id-card figcaption {
+  flex-flow: column nowrap;
+  min-width: 0;
+  padding-bottom: 2em;
+}
+.id-card img {
+  min-width: 225px;
+}
+}
