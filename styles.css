@@ -49,11 +49,12 @@ time, mark, audio, video {
 body {
   margin: 0 auto;
   max-width: 2000px;
+  padding: 0;
 }
 
 
 .container {
-  margin: 0 5% 5% 5%;
+  margin: 0 5% 0 5%;
 }
 
 header {
@@ -213,18 +214,71 @@ img {
   filter: grayscale(100%);
 }
 /* about page alteration */
+
+.about-team-header {
+  min-height: 4rem;
+}
+.about-main {
+  min-height: 0;
+}
+
+.strong {
+  font-weight: 600;
+}
+
 .id-card img {
+  object-fit: cover;
+  max-width: 20%;
+  min-width: 300px;
+  margin: 4%;
   filter: none;
   border: dashed #f60 .1em;
   border-radius: 5px;
 }
-.id-card {
-  border: solid #f60 .2em;
-  border-radius: 15px;
-  display: flex;
+
+.id-card p {
+  margin: 1% 1%;
+  text-align: left;
+  font-size: 2rem;
+  border-bottom: solid #f60 2px;
 }
 
+.id-card .description, .id-card .title {
+  border: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-right: 1em;
+}
 
+.id-card figure {
+  width: 100%;
+  max-width: 100%;
+  margin: 1%;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.id-card figcaption {
+  flex: 1 1;
+  min-height: 200px;
+  border: none;
+  flex: 1 1 200px;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.id-card {
+  max-width: 30%;
+  min-width: 600px;
+  border: solid #f60 .2em;
+  border-radius: 15px;
+  background-color: #f6f6ef;
+  margin: 2% 1%;
+}
+
+/*end of about page specifics*/
 
 .album {
   margin-bottom: 4rem;
@@ -238,6 +292,8 @@ img {
 .social-media {
   flex: 1 1 200px;
   text-align: right;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .social-media i, .return-to-top i {
@@ -328,4 +384,19 @@ footer {
   .social-media {
     text-align: center;
   }
+.id-card {
+    width: 100%;
+    min-width: 270px;
+  }
+.id-card figure {
+  flex-flow: column nowrap;
+}
+.id-card figcaption {
+  flex-flow: column nowrap;
+  min-width: 0;
+  padding-bottom: 2em;
+}
+.id-card img {
+  min-width: 225px;
+}
 }
