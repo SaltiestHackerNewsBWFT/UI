@@ -251,7 +251,7 @@ img {
 }
 .id-card {
   max-width: 30%;
-  min-width: 600px;
+  min-width: 580px;
   border: solid #f60 .2em;
   border-radius: 15px;
   background-color: #f6f6ef;
@@ -317,7 +317,7 @@ footer {
 
 
 
-@media(max-width: 600px) {
+@media(max-width: 610px) {
   .container {
     margin: 0;
   }
